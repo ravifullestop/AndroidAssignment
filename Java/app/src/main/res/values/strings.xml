@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JavaPayTaps</string>
+    <string name="checkout">Checkout</string>
+    <string name="name_ast">Name*</string>
+    <string name="email_ast">Email*</string>
+    <string name="phone_number_ast">Phone Number*</string>
+    <string name="amount_ast">Amount* (In BHD)</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="address_ast">Address*</string>
+    <string name="country_ast">Country*</string>
+    <string name="city_ast">City*</string>
+    <string name="state_ast">State*</string>
+    <string name="zip_code_ast">Zip Code*</string>
+    <string name="billing_address">Billing Address</string>
+    <string name="payment_detail">Payment Detail</string>
+</resources>

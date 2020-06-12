@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckoutActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/checkout"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/ed_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/name_ast"
+                android:inputType="textPersonName"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/email_ast"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_name"
+                app:layout_constraintStart_toStartOf="@+id/ed_name"
+                app:layout_constraintTop_toBottomOf="@id/ed_name" />
+
+            <EditText
+                android:id="@+id/ed_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/phone_number_ast"
+                android:inputType="phone"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_email"
+                app:layout_constraintStart_toStartOf="@+id/ed_email"
+                app:layout_constraintTop_toBottomOf="@id/ed_email" />
+
+            <EditText
+                android:id="@+id/ed_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/amount_ast"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_phone_number"
+                app:layout_constraintStart_toStartOf="@+id/ed_phone_number"
+                app:layout_constraintTop_toBottomOf="@id/ed_phone_number" />
+
+            <TextView
+                android:id="@+id/tv_shipping_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/shipping_address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ed_amount"
+                app:layout_constraintStart_toStartOf="@+id/ed_amount"
+                app:layout_constraintTop_toBottomOf="@id/ed_amount" />
+
+            <EditText
+                android:id="@+id/ed_shipping_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:gravity="top"
+                android:hint="@string/address_ast"
+                android:inputType="textMultiLine"
+                android:maxHeight="@dimen/_80sdp"
+                android:minHeight="@dimen/_80sdp"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_shipping_address"
+                app:layout_constraintStart_toStartOf="@+id/tv_shipping_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shipping_address"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/ed_shipping_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:text="BHR"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_shipping_address"
+                app:layout_constraintStart_toStartOf="@+id/ed_shipping_address"
+                app:layout_constraintTop_toBottomOf="@id/ed_shipping_address" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/spinner_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_shipping_country"
+                app:layout_constraintEnd_toEndOf="@+id/ed_shipping_country"
+                app:layout_constraintTop_toTopOf="@+id/ed_shipping_country" />
+
+            <EditText
+                android:id="@+id/ed_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/state_ast"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_shipping_country"
+                app:layout_constraintStart_toStartOf="@+id/ed_shipping_country"
+                app:layout_constraintTop_toBottomOf="@id/ed_shipping_country" />
+
+            <EditText
+                android:id="@+id/ed_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/city_ast"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_state"
+                app:layout_constraintStart_toStartOf="@+id/ed_state"
+                app:layout_constraintTop_toBottomOf="@id/ed_state" />
+
+            <TextView
+                android:id="@+id/tv_billing_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/billing_address"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ed_city"
+                app:layout_constraintStart_toStartOf="@+id/ed_city"
+                app:layout_constraintTop_toBottomOf="@id/ed_city" />
+
+            <EditText
+                android:id="@+id/ed_billing_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:gravity="top"
+                android:hint="@string/address_ast"
+                android:inputType="textMultiLine"
+                android:maxHeight="@dimen/_80sdp"
+                android:minHeight="@dimen/_80sdp"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_billing_address"
+                app:layout_constraintStart_toStartOf="@+id/tv_billing_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_billing_address"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/ed_billing_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:text="BHR"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_billing_address"
+                app:layout_constraintStart_toStartOf="@+id/ed_billing_address"
+                app:layout_constraintTop_toBottomOf="@id/ed_billing_address" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/spinner_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/ed_billing_country"
+                app:layout_constraintEnd_toEndOf="@+id/ed_billing_country"
+                app:layout_constraintTop_toTopOf="@+id/ed_billing_country" />
+
+
+            <EditText
+                android:id="@+id/ed_billing_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/state_ast"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_billing_country"
+                app:layout_constraintStart_toStartOf="@+id/ed_billing_country"
+                app:layout_constraintTop_toBottomOf="@id/ed_billing_country" />
+
+            <EditText
+                android:id="@+id/ed_billing_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_xml_ed_bg"
+                android:hint="@string/city_ast"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ed_billing_state"
+                app:layout_constraintStart_toStartOf="@+id/ed_billing_state"
+                app:layout_constraintTop_toBottomOf="@id/ed_billing_state" />
+
+            <TextView
+                android:id="@+id/tvCheckOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/bg_xml_btn_bg"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/checkout"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ed_billing_city"
+                app:layout_constraintRight_toRightOf="@+id/ed_billing_city"
+                app:layout_constraintTop_toBottomOf="@+id/ed_billing_city" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
